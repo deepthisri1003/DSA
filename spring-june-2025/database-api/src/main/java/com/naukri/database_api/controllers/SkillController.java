@@ -23,7 +23,7 @@ public class SkillController {
         this.skillRepo = skillRepo;
     }
 
-    @PostMapping("/save/answer")
+    @PostMapping("/save")
     public ResponseEntity<Skill> create(@RequestBody Skill skills){
         skillRepo.save(skills);
         return new ResponseEntity<>(skills, HttpStatus.CREATED);
